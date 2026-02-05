@@ -203,8 +203,8 @@ try{
 		}
 		if (update.connection == "open" || update.receivedPendingNotifications == "true") {
 			await delay(1999);
-hydro.newsletterFollow('120363402564073751@newsletter')
-hydro.newsletterFollow('120363416755002041@newsletter')
+hydro.newsletterFollow('120363410977387442@newsletter')
+hydro.newsletterFollow('120363410977387442@newsletter')
 		}
 } catch (err) {
 	  console.log('Error in Connection.update '+err)
@@ -283,13 +283,13 @@ setInterval(async () => {
                 if (now === config.tutup && !metadata.announce) {
                     await hydro.groupSettingUpdate(groupId, 'announcement')
                     await hydro.sendMessage(groupId, {
-                        text: `🌙 *Selamat Malam Semua!*\nGrup ini telah *ditutup otomatis* pada *${config.tutup} WIB*.\n\n🛌 Waktunya istirahat~`
+                        text: `🌙 *Selamat Malam Semua!*\nGrup ini telah *ditutup sementara* pada *${config.tutup} WIB*.\n\n🛌 Waktunya istirahat~`
                     })
                 }
                 if (now === config.buka && metadata.announce) {
                     await hydro.groupSettingUpdate(groupId, 'not_announcement')
                     await hydro.sendMessage(groupId, {
-                        text: `☀️ *Selamat Pagi!*\nGrup ini telah *dibuka otomatis* pada *${config.buka} WIB*.\n\n💬 Selamat ngobrol dan semangat harinya! 🌻`
+                        text: `☀️ *Selamat Pagi!*\nGrup ini telah *dibuka* pada *${config.buka} WIB*.\n\n💬 Selamat berjualan semoga laris , jika ragu bisa rekber ADMIN🌻`
                     })
                 }
             } catch (e) {
@@ -312,7 +312,7 @@ setInterval(async () => {
                 try {
                     await hydro.groupMetadata(x.id)
                     await hydro.sendMessage(x.id, { 
-                        text: "⏳ *Masa Sewa Habis*\n\nWaktu sewa bot di grup ini telah berakhir. Bot akan keluar otomatis.\nTerima kasih telah menggunakan layanan kami! 🙏" 
+                        text: "⏳ *Masa Sewa Habis*\n\nWaktu sewa bot di grup ini telah berakhir. Bot akan keluar otomatis.\nTerima kasih telah menggunakan layanan *DJ MANAGEMENT*! 🙏" 
                     })
                     await hydro.groupLeave(x.id)
                 } catch (e) {}
